@@ -1,0 +1,45 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    class.cpp.txt                                      :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: nchetela <nchetela@student.42.fr>          +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2025/04/12 03:21:02 by nchetela          #+#    #+#              #
+#    Updated: 2025/04/13 23:48:06 by nchetela         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+#include "{{CLASS_NAME}}.hpp"
+
+{{CLASS_NAME}}::{{CLASS_NAME}} (void){
+	
+}
+
+{{CLASS_NAME}}::{{CLASS_NAME}} (const std::string& str){
+}
+
+{{CLASS_NAME}}::{{CLASS_NAME}} (const {{CLASS_NAME}}& other)
+{
+	
+}
+
+{{CLASS_NAME}}& {{CLASS_NAME}}::operator=({{CLASS_NAME}} && other) noexcept
+{
+	
+}
+
+{{CLASS_NAME}}::~{{CLASS_NAME}} (void)
+{
+	
+}
+
+void {{CLASS_NAME}}::set_mail(std::string mail)
+{
+	this->email = mail;
+}
+
+void {{CLASS_NAME}}::set_num(std::string num)
+{
+	this->number = num;
+}
