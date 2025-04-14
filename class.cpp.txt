@@ -27,7 +27,7 @@ int {{CLASS_NAME}}::get_id(std::string num)
 	return (this->id);
 }
 
-void	set_text(std::string str)
+void	{{CLASS_NAME}}::set_text(std::string str)
 {
 	this.text = str;
 }
