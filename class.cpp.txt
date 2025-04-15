@@ -5,17 +5,20 @@ int	_deleted{{CLASS_NAME}} = 0;
 
 {{CLASS_NAME}}::{{CLASS_NAME}} (void){
 	this->id = {{CLASS_NAME}}::_added{{CLASS_NAME}}++;
+	std::cout << "Création de {{CLASS_NAME}}: " << this->{{CLASS_DEFAULT_KEY}} << "(" << std::to_string(this->id) << ")" << std::endl;
 }
 
 {{CLASS_NAME}}::{{CLASS_NAME}} (const std::string& str){
 	this->id = {{CLASS_NAME}}::_added{{CLASS_NAME}}++;
 	this->{{CLASS_DEFAULT_KEY}} = str;
+	std::cout << "Création de {{CLASS_NAME}}: " << this->{{CLASS_DEFAULT_KEY}} << "(" << std::to_string(this->id) << ")" << std::endl;
 }
 
 {{CLASS_NAME}}::{{CLASS_NAME}} (const {{CLASS_NAME}}& other)
 {
 	this->id = {{CLASS_NAME}}::_added{{CLASS_NAME}}++;
 	this->{{CLASS_DEFAULT_KEY}} = other.{{CLASS_DEFAULT_KEY}};
+	std::cout << "Création de {{CLASS_NAME}}: " << this->{{CLASS_DEFAULT_KEY}} << "(" << std::to_string(this->id) << ")" << std::endl;
 }
 
 {{CLASS_NAME}}& {{CLASS_NAME}}::operator=(const {{CLASS_NAME}}& other)
@@ -23,7 +26,6 @@ int	_deleted{{CLASS_NAME}} = 0;
 	if (this == &other) {
 		return *this;
 	}
-	this->id = {{CLASS_NAME}}::_added{{CLASS_NAME}}++;
 	this->{{CLASS_DEFAULT_KEY}} = other.{{CLASS_DEFAULT_KEY}};
 	return (*this);
 }
@@ -31,7 +33,7 @@ int	_deleted{{CLASS_NAME}} = 0;
 {{CLASS_NAME}}::~{{CLASS_NAME}} (void)
 {
 	{{CLASS_NAME}}::_deleted{{CLASS_NAME}}++;
-	std::cout << "Suppresion du {{CLASS_NAME}}: " << this->{{CLASS_DEFAULT_KEY}} << "(" << std::to_string(this->id) << ")" << std::endl;
+	std::cout << "Suppresion de {{CLASS_NAME}}: " << this->{{CLASS_DEFAULT_KEY}} << "(" << std::to_string(this->id) << ")" << std::endl;
 }
 
 int {{CLASS_NAME}}::nb{{CLASS_NAME}} ()
