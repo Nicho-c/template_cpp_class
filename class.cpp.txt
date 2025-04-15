@@ -1,31 +1,40 @@
 #include "{{CLASS_NAME}}.hpp"
 
+int	_added{{CLASS_NAME}} = 0;
+int	_deleted{{CLASS_NAME}} = 0;
+
 {{CLASS_NAME}}::{{CLASS_NAME}} (void){
-	this->id = {{CLASS_NAME}}::_nb{{CLASS_NAME}}++;
+	this->id = {{CLASS_NAME}}::_added{{CLASS_NAME}}++;
 }
 
 {{CLASS_NAME}}::{{CLASS_NAME}} (const std::string& str){
-	this->id = {{CLASS_NAME}}::_nb{{CLASS_NAME}}++;
+	this->id = {{CLASS_NAME}}::_added{{CLASS_NAME}}++;
 	this->key = str;
 }
 
-{{CLASS_NAME}}::{{CLASS_NAME}} (const Contact& other)
+{{CLASS_NAME}}::{{CLASS_NAME}} (const {{CLASS_NAME}}& other)
 {
-	this->id = {{CLASS_NAME}}::_nb{{CLASS_NAME}}++;
+	this->id = {{CLASS_NAME}}::_added{{CLASS_NAME}}++;
 	this->key = other.key;
 }
 
-{{CLASS_NAME}}& {{CLASS_NAME}}::operator=(const {{CLASS_NAME}} & other)
+{{CLASS_NAME}}& {{CLASS_NAME}}::operator=(const {{CLASS_NAME}}& other)
 {
 	if (this == &other) {
 		return *this;
 	}
-	this->id = {{CLASS_NAME}}::_nb{{CLASS_NAME}}++;
+	this->id = {{CLASS_NAME}}::_added{{CLASS_NAME}}++;
 	this->key = other.key;
 	return (*this);
 }
 
 {{CLASS_NAME}}::~{{CLASS_NAME}} (void)
 {
+	{{CLASS_NAME}}::_deleted{{CLASS_NAME}}++;
 	std::cout << "Suppresion du {{CLASS_NAME}}" << std::endl;
+}
+
+int {{CLASS_NAME}}::nb{{CLASS_NAME}} ()
+{
+	return ({{CLASS_NAME}}::_added{{CLASS_NAME}} - {{CLASS_NAME}}::_deleted{{CLASS_NAME}})
 }

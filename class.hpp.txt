@@ -7,14 +7,16 @@
 		private :
 			int			id;
 			std::string	key;
-			static int	_nb{{CLASS_NAME}};
+			static int	_added{{CLASS_NAME}};
+			static int	_deleted{{CLASS_NAME}};
 
 		public :
-		{{CLASS_NAME}} (void);
+			{{CLASS_NAME}} (void);
 			{{CLASS_NAME}} (const std::string&);
 			{{CLASS_NAME}} (const {{CLASS_NAME}}&);
 			~{{CLASS_NAME}} (void);
 			{{CLASS_NAME}}& operator=(const {{CLASS_NAME}}&);
-	
+
+		static int {{CLASS_NAME}}::nb{{CLASS_NAME}} ();	
 	};
 #endif
