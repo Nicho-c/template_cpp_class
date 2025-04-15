@@ -41,6 +41,6 @@ int {{CLASS_NAME}}::nb{{CLASS_NAME}} ()
 std::string {{CLASS_NAME}}::get_{{CLASS_DEFAULT_KEY}}() {
 	return (this->{{CLASS_DEFAULT_KEY}});
 }
-void {{CLASS_NAME}}::set_{{CLASS_DEFAULT_KEY}}(str::string value) {
+void {{CLASS_NAME}}::set_{{CLASS_DEFAULT_KEY}}(std::string value) {
 	this->{{CLASS_DEFAULT_KEY}} = value;
 }

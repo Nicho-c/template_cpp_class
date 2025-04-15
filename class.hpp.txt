@@ -19,6 +19,6 @@
 
 		static int nb{{CLASS_NAME}} ();	
 		std::string get_{{CLASS_DEFAULT_KEY}}();
-		void get_{{CLASS_DEFAULT_KEY}}();
+		void set_{{CLASS_DEFAULT_KEY}}(std::string);
 	};
 #endif
