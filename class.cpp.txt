@@ -1,7 +1,7 @@
 #include "{{CLASS_NAME}}.hpp"
 
-int	_added{{CLASS_NAME}} = 0;
-int	_deleted{{CLASS_NAME}} = 0;
+int	{{CLASS_NAME}}::_added{{CLASS_NAME}} = 0;
+int	{{CLASS_NAME}}::_deleted{{CLASS_NAME}} = 0;
 
 // Constructor / Destructor / Surchage operator
 
