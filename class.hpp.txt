@@ -1,20 +1,32 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    class.hpp.txt                                      :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: nchetela <nchetela@student.42.fr>          +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2025/04/12 03:21:07 by nchetela          #+#    #+#              #
+#    Updated: 2025/04/15 15:19:29 by nchetela         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 #ifndef {{CLASS_NAME_U}}_H
 # define {{CLASS_NAME_U}}_H
-	#include "headers.hpp"
+	#include <iostream>
+	#include <string>
 
 	class {{CLASS_NAME}} {
 		private :
 			int			id;
-			std::string text;
+			std::string	key;
+			static int	_nb{{CLASS_NAME}};
 
 		public :
-			{{CLASS_NAME}} (void);
+		{{CLASS_NAME}} (void);
 			{{CLASS_NAME}} (const std::string&);
 			{{CLASS_NAME}} (const {{CLASS_NAME}}&);
 			~{{CLASS_NAME}} (void);
-			{{CLASS_NAME}}& operator=({{CLASS_NAME}}&&) noexcept;
-		
-		int		get_id();		
-		void	set_text(std::string);
+			{{CLASS_NAME}}& operator=(const {{CLASS_NAME}}&);
+	
 	};
-#endif {{CLASS_NAME_U}}_H
+#endif

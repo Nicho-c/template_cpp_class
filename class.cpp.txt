@@ -1,33 +1,43 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    class.cpp.txt                                      :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: nchetela <nchetela@student.42.fr>          +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2025/04/12 03:21:02 by nchetela          #+#    #+#              #
+#    Updated: 2025/04/15 15:19:31 by nchetela         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 #include "{{CLASS_NAME}}.hpp"
 
 {{CLASS_NAME}}::{{CLASS_NAME}} (void){
-	
+	this->id = {{CLASS_NAME}}::_nb{{CLASS_NAME}}++;
 }
 
 {{CLASS_NAME}}::{{CLASS_NAME}} (const std::string& str){
+	this->id = {{CLASS_NAME}}::_nb{{CLASS_NAME}}++;
+	this->key = str;
 }
 
-{{CLASS_NAME}}::{{CLASS_NAME}} (const {{CLASS_NAME}}& other)
+{{CLASS_NAME}}::{{CLASS_NAME}} (const Contact& other)
 {
-	
+	this->id = {{CLASS_NAME}}::_nb{{CLASS_NAME}}++;
+	this->key = other->key;
 }
 
-{{CLASS_NAME}}& {{CLASS_NAME}}::operator=({{CLASS_NAME}} && other) noexcept
+{{CLASS_NAME}}& {{CLASS_NAME}}::operator=(const {{CLASS_NAME}} & other)
 {
-	
+	if (this == &other) {
+		return *this;
+	}
+	this->id = {{CLASS_NAME}}::_nb{{CLASS_NAME}}++;
+	this->key = other->key;
+	return (*this);
 }
 
 {{CLASS_NAME}}::~{{CLASS_NAME}} (void)
 {
-	
-}
-
-int {{CLASS_NAME}}::get_id(std::string num)
-{
-	return (this->id);
-}
-
-void	{{CLASS_NAME}}::set_text(std::string str)
-{
-	this.text = str;
+	std::cout << "Suppresion du {{CLASS_NAME}}" << std::endl;
 }
