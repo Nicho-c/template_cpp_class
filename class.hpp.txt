@@ -17,7 +17,8 @@
 			~{{CLASS_NAME}} (void);
 			{{CLASS_NAME}}& operator=(const {{CLASS_NAME}}&);
 
-		static int nb{{CLASS_NAME}} ();	
+		static int nb{{CLASS_NAME}} ();
+		int	getId();
 		std::string get_{{CLASS_DEFAULT_KEY}}();
 		void set_{{CLASS_DEFAULT_KEY}}(std::string);
 	};
